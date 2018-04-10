@@ -14,7 +14,7 @@ out_file = sys.argv[3]
 
 ## load in data
 partition = np.loadtxt(file2, dtype=int, delimiter=None)
-expression = np.loadtxt(file1, dtype=float, delimiter=",", skiprows=1)
+expression = np.loadtxt(file1, dtype=float, delimiter=",")
 label_vec = np.array(expression[:,-1], dtype=int)
 expression = np.array(expression[:,:-1])
 labels = []
