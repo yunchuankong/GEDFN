@@ -1,6 +1,6 @@
 # GEDFN
 
-GEDFN: graph-embedded deep feedforward networks
+GEDFN: graph-embedded deep feedforward networks - Tensorflow implementation
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ The following packages are required for executing the main code file:
 
 ### Data formats
 
-* data matrix (example_expression.csv): a csv file with n rows and p+1 columns. n is the number of samples and p is the number of features. The additional column at last is the 0/1 binary outcome variable vector. 
+* data matrix (example_expression.csv): a csv file with n rows and p+1 columns. n is the number of samples and p is the number of features. The additional column at last is the 0/1 binary outcome variable vector. n=100 and p=500 for the example dataset.
 * feature graph (example_adjacency.txt): a txt file with p rows and p colunms, which is the corresponding adjacency matrix of the feature graph.
 
 NOTE: no headers are allowed in both files.
