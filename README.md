@@ -21,7 +21,7 @@ NOTE: no headers are allowed in both files.
 
 ### Run GEDFN
 
-In the terminal, change the directory under which main.py is located, then type the command
+In the terminal, change the directory to the folder under which main.py is located, then type the command
 
 ```
  python main.py "example_expression.csv" "example_adjacency.txt" "var_impo.csv"
