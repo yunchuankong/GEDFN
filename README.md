@@ -45,3 +45,7 @@ Early stopping.
 ```
 
 and the var_impo.csv file is seen in this repo.
+
+### Hyperparameters and training options
+
+Seen in the main.py.
