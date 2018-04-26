@@ -42,6 +42,13 @@ training_epochs = 100
 batch_size = 8
 display_step = 1
 
+## the constant limit for feature selection
+gamma_c = 50
+gamma_numerator = np.sum(partition, axis=0)
+gamma_denominator = np.sum(partition, axis=0)
+gamma_numerator[np.where(gamma_numerator>gamma_c)] = gamma_c
+
+
 n_hidden_1 = np.shape(partition)[0]
 n_hidden_2 = 64
 n_hidden_3 = 16
@@ -121,8 +128,9 @@ correct_prediction = tf.equal(tf.argmax(pred, 1), tf.argmax(y, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
 y_score = tf.nn.softmax(logits=pred)
 
-var_weights = tf.concat([tf.multiply(weights['h1'], partition), weights['h2']], 1)
-var_importance = tf.reduce_sum(tf.abs(var_weights), 1)
+var_left = tf.reduce_sum(tf.abs(tf.multiply(weights['h1'], partition)), 0)
+var_right = tf.reduce_sum(tf.abs(weights['h2']), 1)
+var_importance = tf.add(tf.multiply(tf.multiply(var_left, gamma_numerator), 1./gamma_denominator), var_right)
 
 with tf.Session() as sess:
 
