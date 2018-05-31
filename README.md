@@ -2,6 +2,8 @@
 
 GEDFN: graph-embedded deep feedforward networks - Tensorflow implementation
 
+The method is introduced in https://academic-oup-com.proxy.library.emory.edu/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty429/5021680.
+
 ## Prerequisites
 
 The following packages are required for executing the main code file:
