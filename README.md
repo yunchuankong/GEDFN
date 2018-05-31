@@ -2,7 +2,7 @@
 
 GEDFN: graph-embedded deep feedforward networks - Tensorflow implementation
 
-The method is introduced in https://academic-oup-com.proxy.library.emory.edu/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty429/5021680.
+The method is introduced in https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/bty429/5021680?redirectedFrom=fulltext.
 
 ## Prerequisites
 
