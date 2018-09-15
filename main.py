@@ -1,3 +1,6 @@
+## Yunchuan Kong
+## 2018 Copyright Reserved
+
 from __future__ import print_function
 import numpy as np
 import tensorflow as tf
